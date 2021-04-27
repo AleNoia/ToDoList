@@ -1,0 +1,22 @@
+@import '@/assets/scss/main.scss';
+
+.navbar{
+    height: 70px;
+    box-shadow: $shadow1;
+    transition: $transition;
+    
+    &:hover{
+        box-shadow: $shadow2;
+    }
+
+    .navbar-dropdown{
+        border-radius: 7%;
+        border-top: 2px solid $color4;
+    }
+
+    .navbar-item{
+        margin: .3em;
+        border-radius: 10px;
+    }
+
+}

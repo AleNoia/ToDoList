@@ -1,0 +1,21 @@
+@import '@/assets/scss/main.scss';
+
+* {
+    color: $color5 !important;
+}
+
+body {
+    font-family: 'Signika', sans-serif !important;
+
+    h1 {
+        font-size: 1.7em
+    }
+
+    h2 {
+        font-size: 1.5em
+    }
+
+    h3 {
+        font-size: 1.1em
+    }
+}
