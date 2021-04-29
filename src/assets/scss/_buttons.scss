@@ -1,0 +1,28 @@
+//================================================================ IMPORT
+@import './shadow.scss';
+@import './colors.scss';
+
+.btn{
+    padding: .7em 1em;
+    margin: 0 0 1em 0;
+    box-shadow: $shadow1;
+    background-image: $gradient1;
+    border-radius: .6em;
+    background-size: 200% auto;
+    i{
+        color: white !important;
+        margin: 0;
+    }
+    &:hover{
+        background-position: right center; 
+        box-shadow: $shadow2;
+    }
+
+    &:active{
+
+        i, h3 {
+            transform: scale(0.8);
+        }
+
+    }
+}

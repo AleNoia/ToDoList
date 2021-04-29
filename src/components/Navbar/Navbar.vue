@@ -1,44 +1,63 @@
 <template>
-    <nav class="navbar px-3 p-1" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item">
-                <h1><i class="fas fa-clipboard-check mr-3"></i>toDoList</h1>
+    <nav class="navbar px-7" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand mr-5">
+            <a href="">
+                <div class="is-flex">
+                    <i class="fas fa-clipboard-check mr-1"></i>
+                    <h1>toDoList</h1>
+                </div>
             </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">  
+        <div class="navbar-content">
+            <div class="navbar-menu">
                 <a class="navbar-item">
-                    <h3><i class="fas fa-home mr-3"></i>Home</h3>
+                    <div class="menu-item">
+                        <i class="fas fa-home"></i>
+                        <h3>Home</h3>
+                    </div>
                 </a>
 
                 <a class="navbar-item">
-                    <h3><i class="fas fa-scroll mr-3"></i>Documentation</h3>
+                    <div class="menu-item">
+                        <i class="fas fa-scroll"></i>
+                        <h3>Documentation</h3>
+                    </div>
                 </a>
             </div>
-        </div>
 
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a>
-                        <h3>More<i class="fas fa-caret-down ml-3"></i></h3>
-                    </a>
-                    <div class="navbar-dropdown is-right scale-in-top">
-                        <a class="navbar-item py-2">
-                            <h3>About</h3>
-                        </a>
-                        <a class="navbar-item py-2">
-                            <h3>Jobs</h3>
-                        </a>
-                        <a class="navbar-item py-2">
-                            <h3>Contact</h3>
-                        </a>
+            <div class="navbar-end">
+                <a class="navbar-item">
+                    <div class="menu-item">
+                        <i class="fas fa-user"></i>
+                        <h3>About me</h3>
                     </div>
+                </a>
+
+                <!-- <div class="navbar-item">
+                    <button class=" menu-bars button"><i class="fas fa-bars solo-i"></i></button>
                 </div>
+
+                <div class="menu-mobile">
+                    <a class="navbar-item">
+                        <div class="menu-item">
+                            <i class="fas fa-home"></i>
+                            <h3>Home</h3>
+                        </div>
+                    </a>
+
+                    <a class="navbar-item">
+                        <div class="menu-item">
+                            <i class="fas fa-scroll"></i>
+                            <h3>Documentation</h3>
+                        </div>
+                    </a>
+                </div> -->
+
             </div>
         </div>
     </nav>
+
 </template>
 
 <script>

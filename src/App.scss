@@ -1,21 +1,55 @@
-@import '@/assets/scss/main.scss';
+@import './assets/scss/main';
 
 * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     color: $color5 !important;
+    font-weight: 400;
 }
 
 body {
-    font-family: 'Signika', sans-serif !important;
+    font-family: 'Signika',sans-serif !important;
 
     h1 {
-        font-size: 1.7em
+        font-size: 1.7em;
+        font-weight: 600;
     }
 
     h2 {
-        font-size: 1.5em
+        font-size: 1.5em;
     }
 
     h3 {
-        font-size: 1.1em
+        font-size: 1.1em;
     }
+
+    a, button{
+        text-decoration: none;
+        cursor: pointer;
+        outline: none;
+        border: none;
+    }
+
+    i, h3{
+        transition: $transition;
+    }
+    
+    i:not(.solo-i){
+        @extend .mr-2
+    }
+
+    b{
+        font-weight: bold;
+    }
+}
+
+ol, ul {
+    margin-left: 1em !important;
+    @include is-flex-column(flex-start, flex-start);
+}
+main{
+    margin-top: 74px;
+    max-width: 1274px;
+    @include is-flex(center, center);
 }

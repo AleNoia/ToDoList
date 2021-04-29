@@ -1,0 +1,72 @@
+//================================================================ IMPORT
+@import '../../assets/scss/main.scss';
+
+.modal-container {
+    @include is-flex(center, center);
+}
+
+.background-modal {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    position: absolute;
+    backdrop-filter: blur(1.7px);
+    background: rgba(0, 0, 0, .7);
+}
+
+.menu{
+    display: flex;
+}
+
+.menu-group{
+    margin-right: 1em;
+
+    h3{
+        color: white !important;
+        font-weight: 600;
+
+        i{
+            padding-left: .2em;
+        }
+    }
+}
+
+.modal {
+    width: 70vw;
+    height: max-content;
+    margin: 0 auto;
+    padding: 1.5em;
+    z-index: 2000;
+    border-radius: .7em;
+    background-color: white;
+    position: relative;
+
+    .menu-item {
+        margin-right: .3em;
+    }
+}
+
+.text-area {
+    min-height: 40vh;
+    padding: 1em;
+    outline: 0;
+    border-radius: .7em;
+    box-shadow: $shadow1;
+
+}
+
+.button-finish{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-image: $gradient2;
+    position: absolute;
+    right: -1.5em;
+    top: -1em;
+
+    i{
+        font-size: 1.7em;
+    }
+}

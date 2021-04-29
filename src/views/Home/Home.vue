@@ -1,20 +1,20 @@
 <template>
-  <div class="columns">
-    <Navbar />
-    <div class="column mt-5">
-      Auto
-    </div>
+  <div class="columns content">
+    <Notes />
+    <AddNoteButton />
   </div>
 </template>
 
 
 
 <script>
-  import Navbar from '@/components/NavbarVertical/NavbarV'
+  import AddNoteButton from '@/components/AddNoteButton/AddNoteButton'
+  import Notes from '@/components/Notes/Notes'
   export default {
     name: 'Home',
     components: {
-      Navbar
+      AddNoteButton,
+      Notes,
     }
   }
 </script>
