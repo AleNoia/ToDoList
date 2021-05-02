@@ -1,18 +1,27 @@
 <template>
   <div id="app">
-    <navbar />
     <main>
-      <home />
+      <Home />
     </main>
+    <Navbar />
+    <AddNoteForm />
+    <Footer />
   </div>
 </template>
 
 <script>
-  import navbar from './components/Navbar/Navbar'
-  import home from './views/Home/Home'
+  import Navbar from '@/components/Navbar/Navbar'
+  import Home from '@/views/Home/Home'
+  import AddNoteForm from '@/components/AddNoteForm/AddNoteForm'
+  import Footer from '@/components/Footer/Footer'
   export default {
-    components:{ navbar, home }
+    components: {
+      Navbar,
+      Home,
+      AddNoteForm,
+      Footer
+    }
   }
 </script>
 
-<style src="./App.scss" lang="scss" />
+<style src="./_App.scss" lang="scss" />

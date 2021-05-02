@@ -1,28 +1,101 @@
 //================================================================ IMPORT
-@import './shadow.scss';
-@import './colors.scss';
+@import './_shadow.scss';
+@import './_colors.scss';
+@import './_transition.scss';
 
-.btn{
-    padding: .7em 1em;
-    margin: 0 0 1em 0;
-    box-shadow: $shadow1;
-    background-image: $gradient1;
-    border-radius: .6em;
+.btn {
+    padding: 1em 2em;
+    border-radius: .75em;
+    font-size: 1.5;
+    transition: $transition;
     background-size: 200% auto;
-    i{
+    background-image: $gradient1;
+    box-shadow: $shadow2;
+
+    i,
+    h3 {
         color: white !important;
         margin: 0;
     }
-    &:hover{
-        background-position: right center; 
-        box-shadow: $shadow2;
+
+    &:hover {
+        background-position: right center;
+        box-shadow: $shadow3;
+
+        i {
+            transform: scale(1.2);
+        }
     }
 
-    &:active{
+    &:active {
 
         i, h3 {
-            transform: scale(0.8);
+            transform: scale(0.95);
         }
 
+    }
+}
+
+.button-primary {
+    float: right;
+}
+
+.button-success {
+    float: right;
+    background-image: $gradient2;
+}
+
+.button-danger {
+    float: right;
+    background-image: $gradient12;
+}
+
+.button-footer {
+    background-image: $gradient4;
+}
+
+
+.button-add-note {  
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: 200% auto;
+    transition: $transition2;
+    box-shadow: $shadow2;
+    position: fixed;
+
+    i {
+        color: white !important;
+        font-size: 1.5em;
+    }
+
+    &:active {
+        i {
+            transform: scale(0.8);
+        }
+    }
+}
+
+.modal {
+    .menu-item {
+        padding: .7em 1em;
+        margin-right: .3em;
+        &:hover {
+            transform: translateY(-4px);
+        }
+    }
+}
+
+.menu-bars-button {
+    background-image: $gradient1;
+    border-radius: 17%;
+    padding: .7em 1em;
+
+    i {
+        color: white !important;
+        font-size: 1.9em;
     }
 }

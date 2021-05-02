@@ -10,63 +10,87 @@
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 10;
     position: absolute;
-    backdrop-filter: blur(1.7px);
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, .75);
+    position: fixed;
 }
 
-.menu{
+.menu {
     display: flex;
+    max-height: 15%;
+    @include is-flex(center, flex-start);
+}
+.group-button {
+    height: 10%;
+    @include is-flex(center, flex-end);
+
+    button:first-child{
+        margin-right: .7em;
+    }
 }
 
-.menu-group{
+.menu-group {
     margin-right: 1em;
+    margin-bottom: .1em;
 
-    h3{
+    h3 {
         color: white !important;
         font-weight: 600;
 
-        i{
+        i {
             padding-left: .2em;
         }
+    }
+
+    i {
+        font-size: 15px;
+    }
+
+    button {
+        height: 36px;
     }
 }
 
 .modal {
-    width: 70vw;
-    height: max-content;
-    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
     padding: 1.5em;
-    z-index: 2000;
-    border-radius: .7em;
-    background-color: white;
-    position: relative;
-
-    .menu-item {
-        margin-right: .3em;
+    background-color: $color6;
+    position: absolute;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    & > * {
+        flex-wrap: wrap;
     }
 }
 
-.text-area {
-    min-height: 40vh;
-    padding: 1em;
-    outline: 0;
+.group-text {
+    height: 80%;
+    margin: 1em 0;
     border-radius: .7em;
     box-shadow: $shadow1;
+    background-color: white;
+    padding: 1.5em;
 
+    hr {
+        opacity: .3;
+    }
 }
 
-.button-finish{
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    background-image: $gradient2;
-    position: absolute;
-    right: -1.5em;
-    top: -1em;
 
-    i{
-        font-size: 1.7em;
-    }
+.text-area {
+    height: 100%;
+    margin-top: 1em;
+    outline: 0;
+    overflow: auto;
+
+    @include scroll();
+}
+
+.title-area {
+    // height: max-content;
+    outline: 0;
+    font-size: 23px;
 }

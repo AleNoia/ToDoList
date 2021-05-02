@@ -1,0 +1,13 @@
+//================================================================ IMPORT
+@import '../../assets/scss/main.scss';
+
+.main-notes {
+    @include title();
+    min-height: 100vh;
+}
+
+.content-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
