@@ -1,0 +1,109 @@
+//================================================================ IMPORT
+@import '../../assets/scss/main.scss';
+.card {
+    flex: 1 1 225px;
+    max-width: 350px;
+    overflow: hidden;
+    height: 260px;
+    position: relative;
+    box-shadow: $shadow3;
+    border-radius: .5em;
+    transition: $transition;
+    cursor: pointer;
+    margin: 0 1em 1em 0;
+
+    p {
+        transition: $transition;
+        color: white;
+    }
+
+    &:hover {
+        transform: translateY(-7px);
+
+        .card-footer {
+            transform: translateY(0%);
+        }
+    }
+
+    &:active {
+
+        .background-card {
+            background-position: right center;
+        }
+    }
+
+}
+
+.card-content {
+    position: relative;
+    border-radius: .5em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: 1s ease;
+
+    i {
+        color: white;
+    }
+}
+
+.title-note {
+    color: white;
+    margin-bottom: .7em;
+}
+
+.status {
+    background-color: hsla(0, 0, 0, .2);
+    width: max-content;
+    padding: .6em 1em;
+    color: white;
+    border-radius: 25px;
+    box-shadow: $shadow3;
+    font-size: 1em;
+    float: right;
+}
+
+.background-card {
+    width: 100%;
+    border-radius: .5em;
+    background-size: 130% auto;
+    height: 100%;
+    transition: $transition;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.didnot {
+    background-image: $gradient12;
+}
+
+.did {
+    background-image: $gradient3;
+
+    .title-note {
+        text-decoration: line-through;
+    }
+}
+
+.card-footer {
+    @include is-flex-column(flex-end, center);
+    transition: $transition;
+    transform: translateY(50%);
+
+    h3 {
+        margin-bottom: .7em;
+    }
+
+    p {
+        max-height: 32px;
+    }
+}
+
+@media (max-width: 502px) {
+    .content-cards {
+        justify-content: center;
+    }
+}
