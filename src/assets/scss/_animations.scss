@@ -135,6 +135,11 @@
         -webkit-animation: opacity-slow 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
         animation: opacity-slow 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
+.opacity-slow2 {
+        -webkit-animation: opacity-slow2 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: opacity-slow2 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
 @-webkit-keyframes opacity-slow {
         0% {
                 opacity: 0;
@@ -146,6 +151,32 @@
 }
 
 @keyframes opacity-slow {
+        0% {
+                opacity: 0;
+        }
+
+        100% {
+                opacity: 1;
+        }
+}
+
+
+.opacity-slow2 {
+        -webkit-animation: opacity-slow2 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: opacity-slow2 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes opacity-slow2 {
+        0% {
+                opacity: 0;
+        }
+
+        100% {
+                opacity: 1;
+        }
+}
+
+@keyframes opacity-slow2 {
         0% {
                 opacity: 0;
         }

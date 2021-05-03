@@ -20,11 +20,12 @@
     max-height: 15%;
     @include is-flex(center, flex-start);
 }
+
 .group-button {
     height: 10%;
     @include is-flex(center, flex-end);
 
-    button:first-child{
+    button:first-child {
         margin-right: .7em;
     }
 }
@@ -61,7 +62,8 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    & > * {
+
+    &>* {
         flex-wrap: wrap;
     }
 }

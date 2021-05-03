@@ -16,9 +16,5 @@
       &::-webkit-scrollbar-thumb {
         background-image: $gradient1; 
         cursor: pointer;
-    
-        &:hover{
-            width: 1em;
-        }
     }
   }

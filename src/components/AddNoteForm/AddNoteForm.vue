@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button @click="modal = !modal" class="btn button-add-note p-2 jello-horizontal ">
+        <button @click="modal = !modal" class="btn button-add-note p-2">
             <i class="fas fa-plus m-0"></i>
         </button>
 
@@ -52,12 +52,16 @@
 </template>
 
 <script>
+    import eventBus from '../eventBus'
     export default {
         data() {
             return {
                 modal: false,
                 notes: [
-
+                    // {concludedPush: false, 
+                    // createPush: "4/20/0420",
+                    // textPush: "bla bla bla bla",
+                    // titlePush: "Bla bla"}
                 ],
                 note: {
                     title: {
@@ -69,9 +73,12 @@
                     dateCreate: {
                         type: Date,
                     },
+                    hourCreate: {
+                        type: Date,
+                    },
+                    id: Number,
                     dateConcluded: false
                 }
-
             }
         },
         methods: {
@@ -79,26 +86,41 @@
                 let tit = document.getElementById("title")
                 let txt = document.getElementById("text")
 
+                let id = Date.now()
                 let now = new Date();
                 let day = now.getDate();
                 let month = now.getMonth();
                 let year = now.getFullYear();
-                let dateNow = `${month}/${day}/${year}`
+                var minutes = now.getMinutes();
+                var hour = now.getHours();
 
+                let dateNow = `${month}/${day}/${year}`
+                let hourNow = `at ${hour}:${minutes}`
                 let title = tit.innerHTML
                 let text = txt.innerHTML
 
                 let titlePush = this.note.title = title
                 let textPush = this.note.text = text
                 let createPush = this.note.dateCreate = dateNow
+                let hourPush = this.note.hourCreate = hourNow
                 let concludedPush = this.note.dateConcluded
+                let idPush = this.note.id = id
 
-                let arr = {titlePush, textPush, createPush, concludedPush}
+                let arr = {
+                    titlePush,
+                    textPush,
+                    createPush,
+                    concludedPush,
+                    hourPush,
+                    idPush
+                }
 
                 this.notes.push(arr)
+                let noteArray = this.notes
 
-                console.log(this.note.title, this.note.text, this.note.dateCreate)
-                console.log(this.notes)
+                eventBus.sendNote(noteArray)
+
+                this.modal = false
             },
             boldFunc() {
                 document.execCommand("bold", false, null)
