@@ -157,6 +157,7 @@ a,
 button {
   text-decoration: none;
   cursor: pointer;
+  font-family: 'Signika', sans-serif !important;
   outline: none;
   border: none;
 }
@@ -179,9 +180,7 @@ ul {
   margin-left: 2em !important;
   @include is-flex-column(flex-start, flex-start);
 }
-
 main {
-  max-width: 1274px;
   @include is-flex(center, center);
   margin: 74px auto;
 }
@@ -191,4 +190,15 @@ main {
 }
 #app{
   background-color: $color6;
+}
+
+.main-content {
+  max-width: 1274px;
+  margin: 0 auto;
+  padding: 2em 1em;
+
+}
+
+.noScroll{
+  overflow-y: hidden;
 }

@@ -91,6 +91,11 @@
     @include scroll();
 }
 
+[contentEditable=true]:empty:not(:focus):before {
+    content: attr(data-text);
+    color: gray;
+}
+
 .title-area {
     // height: max-content;
     outline: 0;

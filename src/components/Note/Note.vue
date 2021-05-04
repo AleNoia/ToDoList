@@ -1,16 +1,16 @@
 <template>
-    <div class="card" @click="doneNote">
+    <div class="card">
         <div class="card-content didnot" :class="style">
             <div class="card-header">
                 <h2 class="title-note opacity-slow2" v-html="notes.titlePush">
                 </h2>
             </div>
             <div class="card-footer">
-                <h3 v-if="concluded == false" class="status opacity-slow2"><i class="fas fa-times"></i>Incomplete
-                </h3>
-                <h3 v-if="concluded == true" class="status opacity-slow"><i class="fas fa-check"></i>Concluded</h3>
-                <p v-if="concluded == false" class="opacity-slow2">Created on {{notes.createPush}} <span>{{notes.hourPush}}</span></p>
-                <p v-if="concluded == true" class="opacity-slow">Concluded on {{concludedDate}} <span>{{concludedHour}}</span></p>
+                <button  @click="doneNote" v-if="notes.concludedPush == false" class="btn status opacity-slow2"><i class="fas fa-times"></i>Incomplete
+                </button>
+                <button  @click="doneNote" v-if="notes.concludedPush == true" class="btn status opacity-slow"><i class="fas fa-check"></i>Concluded</button>
+                <p v-if="notes.concludedPush == false" class="opacity-slow2">Created on {{notes.createPush}} <span>{{notes.hourPush}}</span></p>
+                <p v-if="notes.concludedPush == true" class="opacity-slow">Concluded on {{concludedDate}} <span>{{concludedHour}}</span></p>
             </div>
         </div>
     </div>
@@ -20,7 +20,6 @@
     export default {
         data() {
             return {
-                concluded: false,
                 concludedDate: '',
                 concludedHour: ''
             }
@@ -32,7 +31,7 @@
         },
         methods: {
             doneNote() {
-                this.concluded = !this.concluded
+                this.notes.concludedPush = !this.notes.concludedPush
 
                 let now = new Date();
                 let day = now.getDate();
@@ -42,16 +41,14 @@
                 var hour = now.getHours();
                 this.concludedDate = `${month}/${day}/${year}`
                 this.concludedHour = `at ${hour}:${minutes}`
-
-
-                console.log(this.concluded)
+                console.log("Concluido: " + this.notes.concludedPush)
             }
         },
         computed: {
             style() {
                 return {
-                    didnote: !this.concluded,
-                    done: this.concluded
+                    didnote: !this.notes.concludedPush,
+                    done: this.notes.concludedPush
                 }
             }
         },

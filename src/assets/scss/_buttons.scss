@@ -9,13 +9,11 @@
     font-size: 1.5;
     transition: $transition;
     background-size: 200% auto;
-    background-image: $gradient1;
     box-shadow: $shadow2;
 
     i,
     h3 {
         color: white !important;
-        margin: 0;
     }
 
     &:hover {
@@ -29,7 +27,8 @@
 
     &:active {
 
-        i, h3 {
+        i,
+        h3 {
             transform: scale(0.95);
         }
 
@@ -55,7 +54,7 @@
 }
 
 
-.button-add-note {  
+.button-add-note {
     position: absolute;
     bottom: 2em;
     right: 2em;
@@ -64,6 +63,7 @@
     border-radius: 50%;
     background-size: 200% auto;
     transition: $transition2;
+    background-image: $gradient1;
     box-shadow: $shadow2;
     position: fixed;
 
@@ -83,8 +83,14 @@
     .menu-item {
         padding: .7em 1em;
         margin-right: .3em;
+        background-image: $gradient1;
+
         &:hover {
             transform: translateY(-4px);
+        }
+
+        i {
+            margin: 0;
         }
     }
 }

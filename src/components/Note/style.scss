@@ -53,6 +53,7 @@
 .title-note ::v-deep * {
     color: white;
 }
+
 .title-note ::v-deep i {
     font-style: italic;
 }
@@ -73,6 +74,10 @@
     transition: $transition;
     font-size: 1em;
     float: right;
+
+    &:hover {
+        background-color: hsla(0, 0, 0, .25);
+    }
 }
 
 .background-card {
@@ -104,7 +109,7 @@
     transition: $transition;
     transform: translateY(50%);
 
-    h3 {
+    button {
         margin-bottom: .7em;
     }
 
@@ -112,7 +117,7 @@
         max-height: 32px;
     }
 
-    span{
+    span {
         color: white;
         font-size: .9em;
         opacity: .7;

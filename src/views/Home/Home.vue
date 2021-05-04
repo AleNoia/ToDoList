@@ -1,7 +1,7 @@
 <template>
-  <div class="main-content">
-    <Notes :notes="notes" />
-  </div>
+    <div class="main">
+      <Notes :notes="notes" />
+    </div>
 </template>
 
 

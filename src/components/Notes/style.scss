@@ -3,11 +3,15 @@
 
 .main-notes {
     @include title();
+    max-width: 1274px;
     min-height: 100vh;
+
+    .title {
+        margin-bottom: 2em;
+    }
 }
 
 .content-cards {
     display: flex;
     flex-wrap: wrap;
 }
-
