@@ -43,7 +43,7 @@
     import eventBus from '../eventBus'
     export default {
         props: {
-            notes: {
+            tasks: {
                 required: true
             }
         },
@@ -56,14 +56,14 @@
             }
         },
         watch: {
-            notes() {
-                this.tasksTotal = this.notes.length
+            tasks() {
+                this.tasksTotal = this.tasks.length
 
-                let toDo = this.notes.filter(tasks => tasks.concludedPush == false)
+                let toDo = this.tasks.filter(tasks => tasks.concludedPush == false)
                 this.tasksToDo = toDo.length
                 console.log("to do: " + toDo.length)
 
-                let done = this.notes.filter(tasks => tasks.concludedPush == true)
+                let done = this.tasks.filter(tasks => tasks.concludedPush == true)
                 this.tasksDone = done.length
                 console.log("done: " + done.length)
 

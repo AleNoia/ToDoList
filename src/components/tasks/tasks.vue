@@ -1,18 +1,16 @@
 <template>
     <div>
-        <Status :notes="notes" />
+        <Status :tasks="tasks" />
         <div class="main-content">
-            <section class="main-notes">
+            <section class="main-tasks">
                 <div class="title">
-                    <h1><i class="fas fa-clipboard"></i>Your notes</h1>
+                    <h1><i class="fas fa-clipboard"></i>Your tasks</h1>
                 </div>
                 <div class="content content-cards">
-                    <div v-if="notes.length">
-                        <Note v-for="not in notes" :key="not.idPush" :notes="not" />
-                    </div>
-                    <div v-else class="no-task">
-                        <h1>Add your first task :)</h1>
-                    </div>
+                    <task v-for="not in tasks" :key="not.idPush" :tasks="not" />
+                    <!-- <div v-else class="no-task">
+                        <h1>Add your task :)</h1>
+                    </div> -->
                 </div>
             </section>
         </div>
@@ -23,20 +21,23 @@
 
 
 <script>
-    import Note from '@/components/Note/Note'
+    import task from '@/components/task/task'
     import Status from '@/components/Status/status'
     export default {
         components: {
-            Note,
+            task,
             Status
         },
         data() {
             return {}
         },
         props: {
-            notes: {
+            tasks: {
                 required: true
             }
+        },
+        created(){
+            console.log(this.task)
         }
     }
 </script>

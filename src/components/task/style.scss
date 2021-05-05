@@ -50,15 +50,15 @@
     }
 }
 
-.title-note ::v-deep * {
+.title-task ::v-deep * {
     color: white;
 }
 
-.title-note ::v-deep i {
+.title-task ::v-deep i {
     font-style: italic;
 }
 
-.title-note {
+.title-task {
     color: white;
     margin-bottom: .7em;
 
@@ -98,7 +98,7 @@
 .done {
     background-image: $gradient3;
 
-    .title-note {
+    .title-task {
         text-decoration: line-through;
         @extend .opacity-slow
     }

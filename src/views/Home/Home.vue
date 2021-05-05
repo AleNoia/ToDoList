@@ -1,30 +1,30 @@
 <template>
-    <div class="main">
-      <Notes :notes="notes" />
-    </div>
+  <div class="main">
+    <tasks :tasks="tasks" />
+  </div>
 </template>
 
 
 
 <script>
-  import Notes from '@/components/Notes/Notes'
+  import tasks from '@/components/tasks/tasks'
   import eventBus from '@/components/eventBus'
   export default {
     name: 'Home',
     components: {
-      Notes,
+      tasks,
     },
     data() {
       return {
-        notes: Array,
+        tasks: Array,
       }
     },
     created() {
-      eventBus.onNote(notes => {
-        this.notes = notes
-        console.log(this.notes)
+      eventBus.ontask(tasks => {
+        this.tasks = tasks
+        console.log(this.tasks)
       })
-    }
+    },
   }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button @click="modal = !modal" class="btn button-add-note p-2">
+        <button @click="modal = !modal" class="btn button-add-task p-2">
             <i class="fas fa-plus m-0"></i>
         </button>
 
@@ -39,12 +39,12 @@
                     <div contenteditable="true" data-text="Your title here" spellcheck="false" class="title-area"
                         id="title" />
                     <hr class="my-2">
-                    <div contenteditable="true" data-text="Your note here :)" spellcheck="false" class="text-area"
+                    <div contenteditable="true" data-text="Your task here :)" spellcheck="false" class="text-area"
                         id="text" />
                 </div>
                 <div class="group-button">
                     <button @click="save" class="btn button-success">
-                        <h3>Save note</h3>
+                        <h3>Save task</h3>
                     </button>
                     <button @click="modal = !modal" class="btn button-danger">
                         <h3>Cancel</h3>
@@ -66,8 +66,8 @@
             return {
                 modal: false,
                 showNotification: false,
-                notes: [],
-                note: {
+                tasks: [],
+                task: {
                     title: {
                         type: String,
                     },
@@ -119,13 +119,13 @@
                     let title = tit.innerHTML
                     let text = txt.innerHTML
 
-                    let titlePush = this.note.title = title
-                    let textPush = this.note.text = text
-                    let createPush = this.note.dateCreate = dateNow
-                    let hourPush = this.note.hourCreate = hourNow
-                    let concludedPush = this.note.concluded
-                    let idPush = this.note.id = id
-                    let num = this.note.id = num
+                    let titlePush = this.task.title = title
+                    let textPush = this.task.text = text
+                    let createPush = this.task.dateCreate = dateNow
+                    let hourPush = this.task.hourCreate = hourNow
+                    let concludedPush = this.task.concluded
+                    let idPush = this.task.id = id
+                    let num = this.task.id = num
 
                     let arr = {
                         titlePush,
@@ -137,10 +137,9 @@
                         num
                     }
 
-                    this.notes.push(arr)
-                    let noteArray = this.notes
-
-                    eventBus.sendNote(noteArray)
+                    this.tasks.push(arr)
+                    let taskArray = this.tasks
+                    eventBus.sendtask(taskArray)
 
                     this.modal = false
                 }

@@ -63,7 +63,7 @@
   font-size: 1.7em;
 }
 
-.button-add-note:active i {
+.button-add-task:active i {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }

@@ -1,11 +1,11 @@
 import Vue from 'vue';
 export default new Vue({
     methods: {
-        sendNote(note){
-            this.$emit('noteSend', note)
+        sendtask(task){
+            this.$emit('taskSend', task)
         },
-        onNote(callback){
-            this.$on('noteSend', callback)
+        ontask(callback){
+            this.$on('taskSend', callback)
         },
         sendConcluded(value){
             this.$emit('valueSend', value)
