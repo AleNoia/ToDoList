@@ -66,13 +66,7 @@
             return {
                 modal: false,
                 showNotification: false,
-                notes: [{
-                    concludedPush: false,
-                    createPush: "4/20/4200",
-                    textPush: "bla bla bla bla",
-                    titlePush: "Bla bla",
-                    hourPush: "4:20"
-                }],
+                notes: [],
                 note: {
                     title: {
                         type: String,
@@ -87,7 +81,7 @@
                         type: Date,
                     },
                     id: Number,
-                    concluded: false
+                    concluded: false,
                 }
             }
         },
@@ -131,14 +125,16 @@
                     let hourPush = this.note.hourCreate = hourNow
                     let concludedPush = this.note.concluded
                     let idPush = this.note.id = id
+                    let num = this.note.id = num
 
                     let arr = {
                         titlePush,
                         textPush,
                         createPush,
-                        concludedPush,
                         hourPush,
-                        idPush
+                        concludedPush,
+                        idPush,
+                        num
                     }
 
                     this.notes.push(arr)
@@ -147,7 +143,6 @@
                     eventBus.sendNote(noteArray)
 
                     this.modal = false
-                    // document.body.classList.remove("noScroll")
                 }
 
             },

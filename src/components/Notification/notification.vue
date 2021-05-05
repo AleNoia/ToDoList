@@ -13,25 +13,7 @@
 
 
 <script>
-    // import eventBus from '../eventBus'
     export default {
-        props: {
-            // notes: {
-            //     type: Object,
-            //     required: true
-            // }
-        },
-        data() {
-            return {
-                // notes: Array,
-            }
-        },
-        // created() {
-        //     eventBus.onNote(notes => {
-        //         this.notes = notes
-        //         console.log(this.notes)
-        //     })
-        // }
     }
 </script>
 

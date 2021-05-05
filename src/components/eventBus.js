@@ -6,6 +6,12 @@ export default new Vue({
         },
         onNote(callback){
             this.$on('noteSend', callback)
-        }
+        },
+        sendConcluded(value){
+            this.$emit('valueSend', value)
+        },
+        onConcluded(callback){
+            this.$on('valueSend', callback)
+        },
     }
 })
