@@ -1,58 +1,59 @@
 <template>
-    <div class="card">
+    <div class="card" @click="showModal">
         <div class="card-content didnot" :class="style">
             <div class="card-header">
-                <h2 class="title-task opacity-slow2" v-html="tasks.titlePush">
+                <h2 class="title-task opacity-slow2" v-html="task.task.tit">
                 </h2>
+                <button @click="deleteTask" class="btn button-close">
+                    <h3><i class="fas fa-times"></i></h3>
+                </button>
             </div>
             <div class="card-footer">
-                <button @click="donetask" v-if="tasks.concludedPush == false" class="btn status opacity-slow2"><i
+
+                <button @click.stop="donetask" v-if="task.task.concluded == false" class="btn status opacity-slow2"><i
                         class="fas fa-times"></i>Incomplete
                 </button>
-                <button @click="donetask" v-if="tasks.concludedPush == true" class="btn status opacity-slow"><i
+                <p v-if="task.task.concluded == false" class="opacity-slow2">Created on {{task.task.dateCreate}}
+                    <span>{{task.task.hourCreate}}</span></p>
+
+                <button @click.stop="donetask" v-if="task.task.concluded == true" class="btn status opacity-slow"><i
                         class="fas fa-check"></i>Concluded</button>
-                <p v-if="tasks.concludedPush == false" class="opacity-slow2">Created on {{tasks.createPush}}
-                    <span>{{tasks.hourPush}}</span></p>
-                <p v-if="tasks.concludedPush == true" class="opacity-slow">Concluded on {{concludedDate}}
-                    <span>{{concludedHour}}</span></p>
+                <p v-if="task.task.concluded == true" class="opacity-slow">Concluded on {{task.task.concludedDate}}
+                    <span>{{task.task.concludedHour}}</span></p>
+
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    // import eventBus from '../eventBus'
+    import eventBus from '../eventBus'
+    import DateFactory from '@/factories/dateFactory'
+    const factory = DateFactory()
     export default {
-        data() {
-            return {
-                concludedDate: '',
-                concludedHour: '',
-            }
-        },
         props: {
-            tasks: {
+            task: {
                 required: true
             },
         },
         methods: {
             donetask() {
-                this.tasks.concludedPush = !this.tasks.concludedPush
-
-                let now = new Date();
-                let day = now.getDate();
-                let month = now.getMonth();
-                let year = now.getFullYear();
-                var minutes = now.getMinutes();
-                var hour = now.getHours();
-                this.concludedDate = `${month}/${day}/${year}`
-                this.concludedHour = `at ${hour}:${minutes}`
+                this.task.task.concluded = !this.task.task.concluded
+                this.task.task.concludedDate = factory.BuildDate(new Date())
+                this.task.task.concludedHour = factory.BuildTime(new Date())
+            },
+            deleteTask() {
+                eventBus.$emit("sendIdTask", this.task)
+            },
+            showModal(){
+                console.log(this.task.task.tit)
             }
         },
         computed: {
             style() {
                 return {
-                    didtask: !this.tasks.concludedPush,
-                    done: this.tasks.concludedPush
+                    didtask: !this.task.task.concluded,
+                    done: this.task.task.concluded
                 }
             }
         },

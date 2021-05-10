@@ -4,7 +4,7 @@
 @import './_transition.scss';
 
 .btn {
-    padding: 1em 2em;
+    padding: 1.2em 2em;
     border-radius: .75em;
     font-size: 1.5;
     transition: $transition;
@@ -36,16 +36,17 @@
 }
 
 .button-primary {
-    float: right;
+    background-image: $gradient1;
+    h3 {
+        font-size: 16px;
+    }
 }
 
 .button-success {
-    float: right;
     background-image: $gradient2;
 }
 
 .button-danger {
-    float: right;
     background-image: $gradient12;
 }
 
@@ -103,5 +104,24 @@
     i {
         color: white !important;
         font-size: 1.9em;
+    }
+}
+
+.button-close {
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: $shadow3;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: .5em .9em;
+    border-radius: 100%;
+
+    i {
+        margin: 0;
+    }
+
+
+    h2 {
+        color: white;
     }
 }

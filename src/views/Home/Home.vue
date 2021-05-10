@@ -1,30 +1,32 @@
 <template>
   <div class="main">
-    <tasks :tasks="tasks" />
+    <tasks-component :tasks="tasks"/>
+    <Modal @taskAdded="addTask" />
   </div>
 </template>
-
+ 
 
 
 <script>
-  import tasks from '@/components/tasks/tasks'
-  import eventBus from '@/components/eventBus'
+  import tasksComponent from '@/components/tasks/tasks'
+  import Modal from '@/components/ModalAdd/Modal'
   export default {
     name: 'Home',
     components: {
-      tasks,
+      tasksComponent,
+      Modal
     },
     data() {
       return {
-        tasks: Array,
+        tasks: []
       }
     },
-    created() {
-      eventBus.ontask(tasks => {
-        this.tasks = tasks
+    methods: {
+      addTask(task) {
+        this.tasks.push(task)
         console.log(this.tasks)
-      })
-    },
+      }
+    }
   }
 </script>
 

@@ -3,32 +3,34 @@
         <div class="status-content">
             <div class="group-header">
                 <div class="group-percent">
-                    <h1>{{tasksPercent}}<span>%</span></h1>
-                    <h2> of the tasks were done</h2>
+                    <h1>{{status.tasksPercent}}<span>%</span></h1>
+                    <h3>done</h3>
                 </div>
                 <div class="status-bar">
-                    <div class="bar" :style="{width: tasksPercent + '%'}"></div>
+                    <div class="bar" :style="{width: status.tasksPercent + '%'}"></div>
                 </div>
-                <div class="total">
-                    <h2>{{tasksTotal}}</h2>
-                    <h4>tasks</h4>
-                </div>
+                    <p>Percentage of the tasks you have done</p>
+            </div>
+            <div class="total">
+                <h3><i class="fas fa-thumbtack"></i></h3>
+                <h2>{{status.tasksTotal}}</h2>
+                <h4>tasks</h4>
             </div>
             <div class="group-bottom">
                 <div class="status-item">
                     <div class="group-info-header">
-                        <h2>Tasks to do</h2>
-                        <h1>{{tasksToDo}}</h1>
+                        <h1>{{status.tasksToDo}}</h1>
+                        <h3>Tasks to do</h3>
                     </div>
                     <div></div>
                 </div>
                 <div class="status-item">
-                    <h2>|</h2>
+                    <h2>─</h2>
                 </div>
                 <div class="status-item">
                     <div class="group-info-header">
-                        <h1>{{tasksDone}}</h1>
-                        <h2>Tasks done</h2>
+                        <h1>{{status.tasksDone}}</h1>
+                        <h3>Tasks done</h3>
                     </div>
                     <div></div>
                 </div>
@@ -40,43 +42,12 @@
 
 
 <script>
-    import eventBus from '../eventBus'
     export default {
         props: {
-            tasks: {
+            status: {
                 required: true
             }
         },
-        data() {
-            return {
-                tasksTotal: 0,
-                tasksPercent: 0,
-                tasksToDo: 0,
-                tasksDone: 0,
-            }
-        },
-        watch: {
-            tasks() {
-                this.tasksTotal = this.tasks.length
-
-                let toDo = this.tasks.filter(tasks => tasks.concludedPush == false)
-                this.tasksToDo = toDo.length
-                console.log("to do: " + toDo.length)
-
-                let done = this.tasks.filter(tasks => tasks.concludedPush == true)
-                this.tasksDone = done.length
-                console.log("done: " + done.length)
-
-                let Percent = (this.tasksDone * 100) / this.tasksTotal
-                this.tasksPercent = Percent.toFixed()
-
-            }
-        },
-        created() {
-            eventBus.sendConcluded(concluded => {
-                console.log("concluded: " + concluded)
-            }) 
-        }
     }
 </script>
 

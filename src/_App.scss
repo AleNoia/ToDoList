@@ -185,20 +185,17 @@ main {
   margin: 74px auto;
 }
 
-.content{
-  margin-top: 1.5em;
-}
 #app{
   background-color: $color6;
 }
-
+.content{
+  margin-top: 1.5em;
+}
 .main-content {
   max-width: 1274px;
   margin: 0 auto;
   padding: 2em 1em;
-
 }
-
 .noScroll{
   overflow-y: hidden;
 }

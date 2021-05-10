@@ -19,7 +19,7 @@
     }
 
     &:hover {
-        transform: translateY(-7px);
+        transform: translateY(-4px);
 
         .card-footer {
             transform: translateY(0%);
@@ -33,6 +33,10 @@
         }
     }
 
+}
+
+.card-header{
+    position: relative;
 }
 
 .card-content {
@@ -61,6 +65,7 @@
 .title-task {
     color: white;
     margin-bottom: .7em;
+    max-width: 80%;
 
 }
 

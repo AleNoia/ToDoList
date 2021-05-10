@@ -55,6 +55,7 @@
 .modal {
     width: 100vw;
     height: 100vh;
+    margin-top: 70px;
     top: 0;
     padding: 1.5em;
     background-color: $color6;
@@ -69,7 +70,7 @@
 }
 
 .group-text {
-    height: 80%;
+    height: 65%;
     margin: 1em 0;
     border-radius: .7em;
     box-shadow: $shadow1;

@@ -6,8 +6,6 @@
 
         <div class="modal-container opacity-slow" v-if="modal">
             <Notification v-if="showNotification" />
-
-            <div @click="modal = false" class="background-modal"></div>
             <div class="modal">
                 <div class="menu">
                     <div class="menu-group">
@@ -36,11 +34,11 @@
                     </div>
                 </div>
                 <div class="group-text">
-                    <div contenteditable="true" data-text="Your title here" spellcheck="false" class="title-area"
-                        id="title" />
+                    <div contenteditable="true" @keydown.enter="save" data-text="Your title here" spellcheck="false"
+                        class="title-area" id="title" />
                     <hr class="my-2">
-                    <div contenteditable="true" data-text="Your task here :)" spellcheck="false" class="text-area"
-                        id="text" />
+                    <div contenteditable="true" @keydown.enter="save" data-text="Your task here :)" spellcheck="false"
+                        class="text-area" id="text" />
                 </div>
                 <div class="group-button">
                     <button @click="save" class="btn button-success">
@@ -56,8 +54,12 @@
 </template>
 
 <script>
-    import eventBus from '@/components/eventBus'
+    import eventBus from '../eventBus'
     import Notification from '@/components/Notification/notification'
+    import DateFactory from '@/factories/dateFactory'
+    const factory = DateFactory()
+
+
     export default {
         components: {
             Notification
@@ -66,27 +68,10 @@
             return {
                 modal: false,
                 showNotification: false,
-                tasks: [],
-                task: {
-                    title: {
-                        type: String,
-                    },
-                    text: {
-                        type: String,
-                    },
-                    dateCreate: {
-                        type: Date,
-                    },
-                    hourCreate: {
-                        type: Date,
-                    },
-                    id: Number,
-                    concluded: false,
-                }
             }
         },
         watch: {
-            modal: function() {
+            modal() {
                 let body = document.body
                 if (this.modal == true) {
                     body.classList.add("noScroll")
@@ -95,51 +80,49 @@
                 }
             }
         },
+        created() {
+            eventBus.$on('showModal', (data) => {
+                this.modal = data
+            })
+            document.addEventListener('keyup', this.onEsc)
+        },
+        beforeDestroy() {
+            document.removeEventListener('keyup', this.onEsc)
+        },
         methods: {
+            onEsc(e) {
+                if (!e) e = window.event
+                let keyCode = e.keyCode || e.which
+                if (keyCode == '27') {
+                    this.modal = false
+                }
+            },
             save() {
-                let tit = document.getElementById("title")
-                if (tit.innerHTML.length === 0) {
+                let id = Date.now()
+                let txt = document.getElementById("text").innerHTML
+                let tit = document.getElementById("title").innerHTML
+
+                if (tit.length === 0) {
                     this.showNotification = true;
                     setTimeout(() => {
                         this.showNotification = false;
                     }, 4500)
                 } else {
-                    let txt = document.getElementById("text")
 
-                    let id = Date.now()
-                    let now = new Date();
-                    let day = now.getDate();
-                    let month = now.getMonth();
-                    let year = now.getFullYear();
-                    var minutes = now.getMinutes();
-                    var hour = now.getHours();
-
-                    let dateNow = `${month}/${day}/${year}`
-                    let hourNow = `at ${hour}:${minutes}`
-                    let title = tit.innerHTML
-                    let text = txt.innerHTML
-
-                    let titlePush = this.task.title = title
-                    let textPush = this.task.text = text
-                    let createPush = this.task.dateCreate = dateNow
-                    let hourPush = this.task.hourCreate = hourNow
-                    let concludedPush = this.task.concluded
-                    let idPush = this.task.id = id
-                    let num = this.task.id = num
-
-                    let arr = {
-                        titlePush,
-                        textPush,
-                        createPush,
-                        hourPush,
-                        concludedPush,
-                        idPush,
-                        num
+                    let task = {
+                        id,
+                        txt,
+                        tit,
+                        concluded: false,
+                        dateCreate: factory.BuildDate(new Date()),
+                        hourCreate: factory.BuildTime(new Date()),
+                        concludedDate: String,
+                        concludedHour: String,
                     }
 
-                    this.tasks.push(arr)
-                    let taskArray = this.tasks
-                    eventBus.sendtask(taskArray)
+                    this.$emit('taskAdded', {
+                        task: task
+                    })
 
                     this.modal = false
                 }
