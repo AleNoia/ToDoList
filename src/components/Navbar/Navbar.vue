@@ -2,23 +2,23 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
 
         <div class="navbar-brand mr-5">
-            <a href="">
+            <router-link to="/">    
                 <div class="is-flex">
                     <i class="fas fa-clipboard-check mr-1"></i>
                     <h1>toDoList</h1>
                 </div>
-            </a>
+            </router-link>
         </div>
         <div class="navbar-content">
             <div class="navbar-menu">
-                <a class="navbar-item">
+            <router-link to="/" class="navbar-item">    
                     <div class="menu-item">
                         <i class="fas fa-home"></i>
                         <h3>Home</h3>
                     </div>
-                </a>
+            </router-link>
 
-                <a class="navbar-item">
+                <a class="navbar-item" href="https://github.com/AleNoia/todolist" target="_blank">
                     <div class="menu-item">
                         <i class="fas fa-scroll"></i>
                         <h3>Documentation</h3>
@@ -27,7 +27,7 @@
             </div>
 
             <div class="navbar-end">
-                <a class="navbar-item">
+                <a class="navbar-item"  href="https://github.com/AleNoia" target="_blank">
                     <div class="menu-item">
                         <i class="fas fa-user"></i>
                         <h3>About me</h3>

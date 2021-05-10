@@ -75,7 +75,7 @@
     border-radius: .7em;
     box-shadow: $shadow1;
     background-color: white;
-    padding: 1.5em;
+    padding: 1em 1.5em;
 
     hr {
         opacity: .3;
@@ -88,6 +88,7 @@
     margin-top: 1em;
     outline: 0;
     overflow: auto;
+    outline: 0;
 
     @include scroll();
 }
@@ -97,8 +98,10 @@
     color: gray;
 }
 
-.title-area {
-    // height: max-content;
-    outline: 0;
-    font-size: 23px;
-}
+
+
+@media (max-width: 470px) {
+    .group-text {
+      height: 60%;
+    }
+  }
