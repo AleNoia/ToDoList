@@ -1,5 +1,5 @@
 <template>
-    <div class="card" @click="showModal">
+    <div class="card" @click.stop="donetask">
         <div class="card-content didnot" :class="style">
             <div class="card-header">
                 <h2 class="title-task opacity-slow2" v-html="task.task.tit">
@@ -10,13 +10,13 @@
             </div>
             <div class="card-footer">
 
-                <button @click.stop="donetask" v-if="task.task.concluded == false" class="btn status opacity-slow2"><i
+                <button v-if="task.task.concluded == false" class="btn status opacity-slow2"><i
                         class="fas fa-times"></i>Incomplete
                 </button>
                 <p v-if="task.task.concluded == false" class="opacity-slow2">Created on {{task.task.dateCreate}}
                     <span>{{task.task.hourCreate}}</span></p>
 
-                <button @click.stop="donetask" v-if="task.task.concluded == true" class="btn status opacity-slow"><i
+                <button v-if="task.task.concluded == true" class="btn status opacity-slow"><i
                         class="fas fa-check"></i>Concluded</button>
                 <p v-if="task.task.concluded == true" class="opacity-slow">Concluded on {{task.task.concludedDate}}
                     <span>{{task.task.concludedHour}}</span></p>
@@ -45,9 +45,6 @@
             deleteTask() {
                 eventBus.$emit("sendIdTask", this.task)
             },
-            showModal(){
-                console.log(this.task.task.tit)
-            }
         },
         computed: {
             style() {

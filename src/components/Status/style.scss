@@ -61,6 +61,7 @@
             // width: 25%;
             border-radius: 1em;
             height: 7px;
+            transition: $transition;
             position: relative;
             background-image: $gradient3;
         }

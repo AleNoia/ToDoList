@@ -34,11 +34,8 @@
                     </div>
                 </div>
                 <div class="group-text">
-                    <div contenteditable="true" @keydown.enter="save" data-text="Your title here" spellcheck="false"
-                        class="title-area" id="title" />
-                    <hr class="my-2">
                     <div contenteditable="true" @keydown.enter="save" data-text="Your task here :)" spellcheck="false"
-                        class="text-area" id="text" />
+                        class="text-area" id="title" />
                 </div>
                 <div class="group-button">
                     <button @click="save" class="btn button-success">
@@ -99,7 +96,6 @@
             },
             save() {
                 let id = Date.now()
-                let txt = document.getElementById("text").innerHTML
                 let tit = document.getElementById("title").innerHTML
 
                 if (tit.length === 0) {
@@ -111,7 +107,6 @@
 
                     let task = {
                         id,
-                        txt,
                         tit,
                         concluded: false,
                         dateCreate: factory.BuildDate(new Date()),
