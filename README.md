@@ -11,7 +11,15 @@ If you have any question or suggestion, mail me:
 ![image](https://user-images.githubusercontent.com/82424777/117679633-d4de3b00-b186-11eb-9c10-f4c2d3fa11f0.png)
 ***
 # 📌 Table of Contents
-## [Features](#features)
+* ### 💡 [Features](#features)
+* ### 🛠 [Installation](#Installation)
+* ### 📝 [Utilization and code](#Utilizationandcode)
+* ### ✏ [Text editor](#Texteditor) 
+* ### 📈 [Change status](#Changestatus)
+* ### 📊 [Dashboard](#Dashboard) 
+* ### 📱 [Responsiveness](#Responsiveness)
+* ### 🤝 [Contributing](#Contributing)
+* ### 🧾 [License](#License)
 ***
 # <a name="features"></a>💡 Features
 * 📃 List your day-to-day tasks.
@@ -19,7 +27,7 @@ If you have any question or suggestion, mail me:
 * ✏ Have a simple text editor to build your tasks.
 * 📱 Responsive application.
 ***
-# 🛠 Installation
+# <a name="Installation"></a>🛠 Installation
 You need to install [Node.js](https://nodejs.org/en/download/) and [Vue.js](https://vuejs.org/v2/guide/), then in order to clone the project, run this command:
 
 ```git clone https://github.com/AleNoia/todolist.git```
@@ -28,9 +36,13 @@ Install dependencies
 
 ```npm install```
 
+Run the aplication
+
+```npm run serve```
+
 ***
 
-# 📝 Utilization and code
+# <a name="Utilizationandcode"></a>📝 Utilization and code
 It  is very simple to use the toDoList.
 
 ## 📃 To add one task
@@ -80,7 +92,7 @@ data() {
 },
 ```
 
-## ✏ Text editor
+## <a name="Texteditor"></a>✏ Text editor
 The toDoList text editor is very simple, there is the option to:
 
 Obs: This application uses [execCommand](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand). This feature is deprecated!
@@ -134,7 +146,7 @@ justifyrightFunc() {
 },
 ```
 
-## 📈 Change status
+## <a name="Changestatus"></a>📈 Change status
 To change the status of the task to completed or to pending just click on the card.
 
 The responsibility for this change lies with the ```donetask()``` method.
@@ -146,7 +158,7 @@ donetask() {
 },
 ```
 
-## 📊 Dashboard
+## <a name="Dashboard"></a>📊 Dashboard
 The dashboard data comes from component tasks.
 
 The dashboard has three data:
@@ -173,7 +185,7 @@ computed: {
 ```
 
 ***
-# 📱 Responsiveness
+# <a name="Responsiveness"></a>📱 Responsiveness
 The ToDoList is fully responsive.
 
 ![image](https://user-images.githubusercontent.com/82424777/117744603-6bd6e180-b1df-11eb-9e88-336f65f7951e.png)
@@ -183,17 +195,12 @@ The ToDoList is fully responsive.
 ![image](https://user-images.githubusercontent.com/82424777/117745674-5367c680-b1e1-11eb-9cc8-0e751b46004d.png)
 ![image](https://user-images.githubusercontent.com/82424777/117745688-58c51100-b1e1-11eb-9000-d5231895cdf3.png)
 
-
-
-
-
 ***
-# 🤝 Contributing
+# <a name="Contributing"></a>🤝 Contributing
 Feel free to contribute.
 
-
 ***
-# 🧾 License
+# <a name="License"></a>🧾 License
 Released in 2021. This project is under the [MIT license](https://github.com/AleNoia/todolist/blob/main/LICENSE).
 
 Made by [Igor Noia](https://github.com/AleNoia) 🤙
