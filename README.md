@@ -89,7 +89,7 @@ All tasks will be stored in the __task array__ in the home component and also in
 ```javascript
 data() {
  return {
-    tasks: []
+    tasks: [] //Tasks array
   }
 },
 ```
@@ -97,15 +97,15 @@ data() {
 ## Local storage
 
 ```javascript
-watch:{
+watch:{ // stoing task to local storage
     tasks:{
       deep: true,
       handler(){
         localStorage.setItem('tasks', JSON.stringify(this.tasks))
       }
     }
-  },
-created(){
+  }, 
+created(){ // receiving tasks from local storage
     const json = localStorage.getItem('tasks')
     const array = JSON.parse(json) 
     this.tasks = Array.isArray(array) ? array : []
