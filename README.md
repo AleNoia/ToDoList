@@ -39,7 +39,7 @@ My purpose with this project is to learn more about the Vue.js framework, also l
 * work with date and time
 * work with Ui and Ux design
 * work with Sass
-* work with responsiveness
+* work with responsive web design
 
 ***
 # <a name="Installation"></a>🛠 Installation
