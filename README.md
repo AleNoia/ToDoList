@@ -143,6 +143,7 @@ The dashboard data comes from component tasks.
 
 The dashboard has three data:
 * Percentage of the tasks you have done
+* Tasks total
 * Tasks to do
 * Tasks done
 
