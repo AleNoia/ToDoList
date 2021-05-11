@@ -113,9 +113,12 @@ created(){
 ```
 
 ## <a name="Texteditor"></a>✏ Text editor
-The toDoList text editor is very simple, there is the option to:
+
+![image](https://user-images.githubusercontent.com/82424777/117817673-344b5200-b23e-11eb-919c-d0424ca3f5a1.png)
 
 __Obs:__ This application uses [execCommand](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand). This feature is deprecated!
+
+The toDoList text editor is very simple, there is the option to:
 
 * Make text bold
 ```javascript
@@ -169,6 +172,9 @@ justifyrightFunc() {
 ## <a name="Changestatus"></a>📈 Change status
 To change the status of the task to completed or to pending just click on the card.
 
+![image](https://user-images.githubusercontent.com/82424777/117817346-e46c8b00-b23d-11eb-97fa-0323970afc2e.png)
+
+
 The responsibility for this change lies with the ```donetask()``` method.
 ```javascript
 donetask() {
@@ -180,6 +186,8 @@ donetask() {
 
 ## <a name="Dashboard"></a>📊 Dashboard
 The dashboard data comes from component tasks.
+
+![image](https://user-images.githubusercontent.com/82424777/117817170-b5561980-b23d-11eb-97f2-4b83a2c22d46.png)
 
 The dashboard has three data:
 * Tasks total
