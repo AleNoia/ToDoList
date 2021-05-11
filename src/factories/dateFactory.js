@@ -1,5 +1,6 @@
 
 function DateFactory() {
+    // Creating custom date
     function BuildDate(now) {
         let day = now.getDate();
         let month = now.getMonth();
@@ -10,6 +11,7 @@ function DateFactory() {
         return dateNow
     }
 
+    // Creating custom hour
     function BuildTime(now) {
         let minutes = now.getMinutes();
         let hour = now.getHours();

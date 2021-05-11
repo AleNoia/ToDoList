@@ -38,9 +38,9 @@
         },
         methods: {
             donetask() {
-                this.task.task.concluded = !this.task.task.concluded
-                this.task.task.concludedDate = factory.BuildDate(new Date())
-                this.task.task.concludedHour = factory.BuildTime(new Date())
+                this.task.task.concluded = !this.task.task.concluded  // Changing status
+                this.task.task.concludedDate = factory.BuildDate(new Date()) // Including task completion date.
+                this.task.task.concludedHour = factory.BuildTime(new Date()) // Including task completion hour.
             },
             deleteTask() {
                 eventBus.$emit("sendIdTask", this.task)

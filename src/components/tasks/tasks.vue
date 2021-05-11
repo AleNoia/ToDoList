@@ -1,6 +1,7 @@
 <template>
     <div>
-        <Status :status="status" />
+        <!-- Statua component -->
+        <Status :status="status" /> 
         <div class="main-content">
             <section class="main-tasks">
                 <div class="title">
@@ -8,6 +9,7 @@
                 </div>
                 <div class="content content-cards">
                     <template v-if="tasks.length">
+                        <!-- Listing tasks -->
                         <Task v-for="task in tasks" :key="task.id" :task="task" />
                     </template>
                     <div v-else class="no-task">
@@ -52,10 +54,10 @@
         },
         computed: {
             status() {
-                let tasksTotal = this.tasks.length
-                let tasksToDo = this.tasks.filter(tasks => tasks.task.concluded == false).length
-                let tasksDone = this.tasks.filter(tasks => tasks.task.concluded == true).length
-                let tasksPercent = Math.round(tasksDone / tasksTotal * 100) || 0
+                let tasksTotal = this.tasks.length // Task total 
+                let tasksToDo = this.tasks.filter(tasks => tasks.task.concluded == false).length // Tasks pending 
+                let tasksDone = this.tasks.filter(tasks => tasks.task.concluded == true).length // Tasks done
+                let tasksPercent = Math.round(tasksDone / tasksTotal * 100) || 0 // Tasks percent
                 return {
                     tasksTotal,
                     tasksToDo,
@@ -66,11 +68,11 @@
         },
         methods: {
             showModal() {
-                eventBus.$emit('showModal', this.modalBoo)
+                eventBus.$emit('showModal', this.modalBoo) // Show modal by center button
             },
         },
         created() {
-            eventBus.$on('sendIdTask', (task) => {
+            eventBus.$on('sendIdTask', (task) => { // Deleting card
                 const i = this.tasks.indexOf(task)
                 this.tasks.splice(i, 1)
             })

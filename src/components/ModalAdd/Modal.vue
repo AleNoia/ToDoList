@@ -68,7 +68,7 @@
             }
         },
         watch: {
-            modal() {
+            modal() { // Removing scroll when opening modal
                 let body = document.body
                 if (this.modal == true) {
                     body.classList.add("noScroll")
@@ -77,7 +77,7 @@
                 }
             }
         },
-        created() {
+        created() { // Closing modal by ESC key
             eventBus.$on('showModal', (data) => {
                 this.modal = data
             })
@@ -86,7 +86,7 @@
         beforeDestroy() {
             document.removeEventListener('keyup', this.onEsc)
         },
-        methods: {
+        methods: {  // Closing modal by ESC key
             onEsc(e) {
                 if (!e) e = window.event
                 let keyCode = e.keyCode || e.which
@@ -95,30 +95,30 @@
                 }
             },
             save() {
-                let id = Date.now()
-                let tit = document.getElementById("title").innerHTML
+                let id = Date.now() // Creatgin a id by the date.now()
+                let tit = document.getElementById("title").innerHTML // Taking the task and storing on the let tit.
 
-                if (tit.length === 0) {
+                if (tit.length === 0) { // Verifying that the task is not empty.
                     this.showNotification = true;
-                    setTimeout(() => {
+                    setTimeout(() => { // If it is empty, a notification will appear.
                         this.showNotification = false;
                     }, 4500)
                 } else {
-
+                    // If it is not empty, all data will be stored in the task object.
                     let task = {
                         id,
                         tit,
                         concluded: false,
-                        dateCreate: factory.BuildDate(new Date()),
-                        hourCreate: factory.BuildTime(new Date()),
+                        dateCreate: factory.BuildDate(new Date()), // It will create a custom date according to the current date.
+                        hourCreate: factory.BuildTime(new Date()), // It will create a custom time according to the current date.
                         concludedDate: String,
                         concludedHour: String,
                     }
-
+                    // It will emit an event that will be heard by the parent component (Home) and the task will be passed to it.
                     this.$emit('taskAdded', {
                         task: task
                     })
-
+                    // Finally, the modal will close.
                     this.modal = false
                 }
 
