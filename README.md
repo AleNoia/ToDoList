@@ -34,10 +34,10 @@ If you have any question, suggestion or want to contact, mail me:
 My purpose with this project is to learn more about the Vue.js framework, also learn how to:
 * create a text editor
 * work with data and create a dashboard
-* work with Ui and Ux design
-* create documentation
-* work with Sass
+* create a documentation
 * work with local storage
+* work with Ui and Ux design
+* work with Sass
 * work with date and time
 
 ***
