@@ -203,7 +203,7 @@ The dashboard data comes from component tasks.
 
 ![image](https://user-images.githubusercontent.com/82424777/117817170-b5561980-b23d-11eb-97f2-4b83a2c22d46.png)
 
-The dashboard has three data:
+The dashboard has this data:
 * Tasks total
 * Tasks to do
 * Tasks done
