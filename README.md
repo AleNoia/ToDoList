@@ -12,6 +12,7 @@ If you have any question or suggestion, mail me:
 ***
 # 📌 Table of Contents
 * 💡 [Features](#features)
+* 🎯 [Purpose](#Purpose)
 * 🛠 [Installation](#Installation)
 * 📝 [Utilization](#Utilization)
 * ✏ [Text editor](#Texteditor) 
@@ -26,6 +27,16 @@ If you have any question or suggestion, mail me:
 * 📈 Have a dashboard with the data of your tasks.
 * ✏ Have a simple text editor to build your tasks.
 * 📱 Responsive application.
+
+***
+# <a name="Purpose"></a>🎯 Purpose
+My purpose with this project is to learn more about the Vue.js framework, also learn how to:
+* How to create a text editor
+* How to work with data and create a dashboard
+* How to work with Ui and Ux design
+* How to work with local storage
+* How to work with date and time
+
 ***
 # <a name="Installation"></a>🛠 Installation
 You need to install [Node.js](https://nodejs.org/en/download/) and [Vue.js](https://vuejs.org/v2/guide/), then in order to clone the project, run this command:
@@ -67,7 +78,7 @@ save() {
             tit,
             concluded: false,
             dateCreate: factory.BuildDate(new Date()), // It will create a custom date according to the current date.
-            hourCreate: factory.BuildTime(new Date()), // It will create a custom hour according to the current date.
+            hourCreate: factory.BuildTime(new Date()), // It will create a custom time according to the current date.
             concludedDate: String,
             concludedHour: String,
         }
@@ -180,7 +191,7 @@ The responsibility for this change lies with the ```donetask()``` method.
 donetask() {
     this.task.task.concluded = !this.task.task.concluded // Changing status
     this.task.task.concludedDate = factory.BuildDate(new Date()) // Including task completion date.
-    this.task.task.concludedHour = factory.BuildTime(new Date()) // Including task completion hour.
+    this.task.task.concludedHour = factory.BuildTime(new Date()) // Including task completion time.
 },
 ```
 
