@@ -23,11 +23,24 @@
       }
     },
     methods: {
-      addTask(task) {
-        this.tasks.push(task)  // receiving task and pushing to tasks array
+      addTask(task) {  // receiving task and pushing to tasks array
+        this.tasks.push(task)
         console.log(this.tasks)
       }
-    }
+    },
+    watch:{ // stoing task to local storage
+      tasks:{
+        deep: true,
+        handler(){
+          localStorage.setItem('tasks', JSON.stringify(this.tasks))
+        }
+      }
+    },
+    created(){ // receiving tasks from local storage
+      const json = localStorage.getItem('tasks')
+      const array = JSON.parse(json) 
+      this.tasks = Array.isArray(array) ? array : []
+    },
   }
 </script>
 
