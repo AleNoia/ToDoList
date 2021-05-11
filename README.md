@@ -36,6 +36,7 @@ My purpose with this project is to learn more about the Vue.js framework, also l
 * How to work with Ui and Ux design
 * How to work with local storage
 * How to work with date and time
+* How to create documentation
 
 ***
 # <a name="Installation"></a>🛠 Installation
