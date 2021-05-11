@@ -98,7 +98,7 @@ save() {
 
 All tasks will be stored in the __task array__ in the home component and also in the browser's __local storage__.
 
-## Task array
+## Tasks array
 
 ```javascript
 data() {
