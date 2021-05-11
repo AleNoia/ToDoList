@@ -15,9 +15,10 @@ If you have any question or suggestion, mail me:
 * 🎯 [Purpose](#Purpose)
 * 🛠 [Installation](#Installation)
 * 📝 [Utilization](#Utilization)
-* ✏ [Text editor](#Texteditor) 
-* 📈 [Change status](#Changestatus)
-* 📊 [Dashboard](#Dashboard) 
+  * 📃 [To add one task](#Toaddonetask)
+  * ✏ [Text editor](#Texteditor) 
+  * 📈 [Change status](#Changestatus)
+  * 📊 [Dashboard](#Dashboard) 
 * 📱 [Responsiveness](#Responsiveness)
 * 🤝 [Contributing](#Contributing)
 * 🧾 [License](#License)
@@ -57,7 +58,7 @@ Run the aplication
 # <a name="Utilization"></a>📝 Utilization 
 It  is very simple to use the toDoList.
 
-## 📃 To add one task
+## <a name="Toaddonetask"></a> 📃 To add one task
 To add a new task, just click the "Click here to add one" button or the button in the bottom right corner.
 Both buttons will open a modal to add your task.
 
