@@ -63,7 +63,8 @@ It  is very simple to use the toDoList.
 To add a new task, just click the "Click here to add one" button or the button in the bottom right corner.
 Both buttons will open a modal to add your task.
 
-Task storage is responsible for the ```save()``` method.
+Task storage is responsible for the ```save()``` and the ```addTask(task)``` method.
+## save()
 ``` javascript
 save() {
     let id = Date.now() // Creatgin a id by the date.now()
@@ -94,6 +95,14 @@ save() {
     }
 
 },
+```
+
+## addTask(task)
+```javascript
+addTask(task) { // receiving task and pushing to tasks array
+    this.tasks.push(task)
+    console.log(this.tasks)
+}
 ```
 
 All tasks will be stored in the __task array__ in the home component and also in the browser's __local storage__.
