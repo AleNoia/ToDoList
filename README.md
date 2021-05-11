@@ -147,18 +147,20 @@ The dashboard has three data:
 * Tasks done
 
 ```javascript
-status() {
-    let tasksTotal = this.tasks.length
-    let tasksToDo = this.tasks.filter(tasks => tasks.task.concluded == false).length
-    let tasksDone = this.tasks.filter(tasks => tasks.task.concluded == true).length
-    let tasksPercent = Math.round(tasksDone / tasksTotal * 100) || 0
-    return {
-        tasksTotal,
-        tasksToDo,
-        tasksDone,
-        tasksPercent
+computed: {
+    status() {
+        let tasksTotal = this.tasks.length // Task total 
+        let tasksToDo = this.tasks.filter(tasks => tasks.task.concluded == false).length // Tasks pending 
+        let tasksDone = this.tasks.filter(tasks => tasks.task.concluded == true).length // Tasks done
+        let tasksPercent = Math.round(tasksDone / tasksTotal * 100) || 0 // Tasks percent
+        return {
+            tasksTotal,
+            tasksToDo,
+            tasksDone,
+            tasksPercent
+        }
     }
-}
+},
 ```
 
 ***
