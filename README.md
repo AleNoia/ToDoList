@@ -11,15 +11,15 @@ If you have any question or suggestion, mail me:
 ![image](https://user-images.githubusercontent.com/82424777/117679633-d4de3b00-b186-11eb-9c10-f4c2d3fa11f0.png)
 ***
 # 📌 Table of Contents
-* ### 💡 [Features](#features)
-* ### 🛠 [Installation](#Installation)
-* ### 📝 [Utilization and code](#Utilizationandcode)
-* ### ✏ [Text editor](#Texteditor) 
-* ### 📈 [Change status](#Changestatus)
-* ### 📊 [Dashboard](#Dashboard) 
-* ### 📱 [Responsiveness](#Responsiveness)
-* ### 🤝 [Contributing](#Contributing)
-* ### 🧾 [License](#License)
+* 💡 [Features](#features)
+* 🛠 [Installation](#Installation)
+* 📝 [Utilization](#Utilization)
+* ✏ [Text editor](#Texteditor) 
+* 📈 [Change status](#Changestatus)
+* 📊 [Dashboard](#Dashboard) 
+* 📱 [Responsiveness](#Responsiveness)
+* 🤝 [Contributing](#Contributing)
+* 🧾 [License](#License)
 ***
 # <a name="features"></a>💡 Features
 * 📃 List your day-to-day tasks.
@@ -42,7 +42,7 @@ Run the aplication
 
 ***
 
-# <a name="Utilizationandcode"></a>📝 Utilization and code
+# <a name="Utilization"></a>📝 Utilization 
 It  is very simple to use the toDoList.
 
 ## 📃 To add one task
@@ -82,7 +82,9 @@ save() {
 },
 ```
 
-All tasks will be stored in the tasks array in the home component.
+All tasks will be stored in the __task array__ in the home component and also in the browser's __local storage__.
+
+## Task array
 
 ```javascript
 data() {
@@ -92,10 +94,28 @@ data() {
 },
 ```
 
+## Local storage
+
+```javascript
+watch:{
+    tasks:{
+      deep: true,
+      handler(){
+        localStorage.setItem('tasks', JSON.stringify(this.tasks))
+      }
+    }
+  },
+created(){
+    const json = localStorage.getItem('tasks')
+    const array = JSON.parse(json) 
+    this.tasks = Array.isArray(array) ? array : []
+  },
+```
+
 ## <a name="Texteditor"></a>✏ Text editor
 The toDoList text editor is very simple, there is the option to:
 
-Obs: This application uses [execCommand](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand). This feature is deprecated!
+__Obs:__ This application uses [execCommand](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand). This feature is deprecated!
 
 * Make text bold
 ```javascript
@@ -162,10 +182,10 @@ donetask() {
 The dashboard data comes from component tasks.
 
 The dashboard has three data:
-* Percentage of the tasks you have done
 * Tasks total
 * Tasks to do
 * Tasks done
+* Percentage of the tasks you have done
 
 ```javascript
 computed: {
