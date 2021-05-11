@@ -4,7 +4,7 @@
  
 This project is a simple web application of one to do list implemented with Vue.js. 
 
-If you have any question or suggestion, mail me:
+If you have any question, suggestion or want to contact, mail me:
 
 📧 igornoiasilva@gmail.com.
 
