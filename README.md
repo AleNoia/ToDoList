@@ -129,6 +129,7 @@ justifyrightFunc() {
 
 ## 📈 Change status
 To change the status of the task to completed or to pending just click on the card.
+
 The responsibility for this change lies with the ```donetask()``` method.
 ```javascript
 donetask() {
