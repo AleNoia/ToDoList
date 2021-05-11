@@ -35,9 +35,10 @@ My purpose with this project is to learn more about the Vue.js framework, also l
 * How to create a text editor
 * How to work with data and create a dashboard
 * How to work with Ui and Ux design
+* How to create documentation
+* How to work with Sass
 * How to work with local storage
 * How to work with date and time
-* How to create documentation
 
 ***
 # <a name="Installation"></a>🛠 Installation
