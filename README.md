@@ -11,9 +11,9 @@ If you have any question or suggestion, mail me:
 ![image](https://user-images.githubusercontent.com/82424777/117679633-d4de3b00-b186-11eb-9c10-f4c2d3fa11f0.png)
 ***
 # 📌 Table of Contents
-## [Features](features)
+## [Features](#features)
 ***
-# <a name="features">💡 Features</a>
+# <a name="features"></a>💡 Features
 * 📃 List your day-to-day tasks.
 * 📈 Have a dashboard with the data of your tasks.
 * ✏ Have a simple text editor to build your tasks.
