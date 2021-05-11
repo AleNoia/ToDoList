@@ -19,7 +19,7 @@ If you have any question, suggestion or want to contact, mail me:
   * ✏ [Text editor](#Texteditor) 
   * 📈 [Change status](#Changestatus)
   * 📊 [Dashboard](#Dashboard) 
-* 📱 [Responsiveness](#Responsiveness)
+* 📱 [Responsive Web Design](#Responsive)
 * 🤝 [Contributing](#Contributing)
 * 🧾 [License](#License)
 ***
@@ -33,12 +33,13 @@ If you have any question, suggestion or want to contact, mail me:
 # <a name="Purpose"></a>🎯 Purpose
 My purpose with this project is to learn more about the Vue.js framework, also learn how to:
 * create a text editor
-* work with data and create a dashboard
 * create a documentation
+* work with data and create a dashboard
 * work with local storage
+* work with date and time
 * work with Ui and Ux design
 * work with Sass
-* work with date and time
+* work with responsiveness
 
 ***
 # <a name="Installation"></a>🛠 Installation
@@ -236,7 +237,7 @@ computed: {
 ```
 
 ***
-# <a name="Responsiveness"></a>📱 Responsiveness
+# <a name="Responsive"></a>📱 Responsive Web Design
 The ToDoList is fully responsive.
 
 ![image](https://user-images.githubusercontent.com/82424777/117744603-6bd6e180-b1df-11eb-9e88-336f65f7951e.png)
