@@ -2,11 +2,18 @@
 
 # 📋 toDoList
  
-This project is a simple web application of one to do list implemented with Vue.js.
+This project is a simple web application of one to do list implemented with Vue.js. 
+
+If you have any question or suggestion, mail me:
+
+📧 igornoiasilva@gmail.com.
 
 ![image](https://user-images.githubusercontent.com/82424777/117679633-d4de3b00-b186-11eb-9c10-f4c2d3fa11f0.png)
 ***
-# 💡 Features
+# 📌 Table of Contents
+## [Features](features)
+***
+# <a name="features">💡 Features</a>
 * 📃 List your day-to-day tasks.
 * 📈 Have a dashboard with the data of your tasks.
 * ✏ Have a simple text editor to build your tasks.
