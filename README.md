@@ -32,13 +32,13 @@ If you have any question, suggestion or want to contact, mail me:
 ***
 # <a name="Purpose"></a>🎯 Purpose
 My purpose with this project is to learn more about the Vue.js framework, also learn how to:
-* How to create a text editor
-* How to work with data and create a dashboard
-* How to work with Ui and Ux design
-* How to create documentation
-* How to work with Sass
-* How to work with local storage
-* How to work with date and time
+* create a text editor
+* work with data and create a dashboard
+* work with Ui and Ux design
+* create documentation
+* work with Sass
+* work with local storage
+* work with date and time
 
 ***
 # <a name="Installation"></a>🛠 Installation
