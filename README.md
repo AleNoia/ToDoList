@@ -38,7 +38,7 @@ My purpose with this project is to learn more about the Vue.js framework, also l
 * work with local storage
 * work with date and time
 * work with Ui and Ux design
-* work with Sass
+* work with Scss
 * work with responsive web design
 
 ***
