@@ -1,14 +1,15 @@
-![image](https://user-images.githubusercontent.com/82424777/117688679-605bca00-b18f-11eb-954d-d76fa4cf6ba2.png)
+
 
 # 📋 toDoList
  
 This project is a simple web application of one to do list implemented with Vue.js. 
 
+![image](https://user-images.githubusercontent.com/82424777/117688679-605bca00-b18f-11eb-954d-d76fa4cf6ba2.png)
+
 If you have any question, suggestion or want to contact, mail me:
 
 📧 igornoiasilva@gmail.com.
 
-![image](https://user-images.githubusercontent.com/82424777/117679633-d4de3b00-b186-11eb-9c10-f4c2d3fa11f0.png)
 ***
 # 📌 Table of Contents
 * 💡 [Features](#features)
@@ -59,6 +60,8 @@ Run the aplication
 
 # <a name="Utilization"></a>📝 Utilization 
 It  is very simple to use the toDoList.
+
+![image](https://user-images.githubusercontent.com/82424777/117679633-d4de3b00-b186-11eb-9c10-f4c2d3fa11f0.png)
 
 ## <a name="Toaddonetask"></a> 📃 To add one task
 To add a new task, just click the "Click here to add one" button or the button in the bottom right corner.
