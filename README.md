@@ -19,14 +19,14 @@ If you have any question, suggestion or want to contact, mail me:
   * 📃 [To add one task](#Toaddonetask)
   * ✏ [Text editor](#Texteditor) 
   * 📈 [Change status](#Changestatus)
-  * 📊 [Dashboard](#Dashboard) 
+  * 📊 [Data panel](#dataPanel) 
 * 📱 [Responsive Web Design](#Responsive)
 * 🤝 [Contributing](#Contributing)
 * 🧾 [License](#License)
 ***
 # <a name="features"></a>💡 Features
 * 📃 List your day-to-day tasks.
-* 📈 Have a dashboard with the data of your tasks.
+* 📈 Have a data panel with the data of your tasks.
 * ✏ Have a simple text editor to build your tasks.
 * 📱 Responsive application.
 
@@ -35,7 +35,7 @@ If you have any question, suggestion or want to contact, mail me:
 My purpose with this project is to learn more about the Vue.js framework, also learn how to:
 * create a text editor
 * create a documentation
-* work with data and create a dashboard
+* work with data and create a data panel
 * work with local storage
 * work with date and time
 * work with Ui and Ux design
@@ -211,12 +211,12 @@ donetask() {
 },
 ```
 
-## <a name="Dashboard"></a>📊 Dashboard
-The dashboard data comes from component tasks.
+## <a name="dataPanel"></a>📊 Data panel
+The data panel data comes from component tasks.
 
 ![image](https://user-images.githubusercontent.com/82424777/117817170-b5561980-b23d-11eb-97f2-4b83a2c22d46.png)
 
-The dashboard has this data:
+The data panel has this data:
 * Tasks total
 * Tasks to do
 * Tasks done
