@@ -6,9 +6,9 @@ This project is a simple web application of one to do list implemented with Vue.
 
 ![image](https://user-images.githubusercontent.com/82424777/117688679-605bca00-b18f-11eb-954d-d76fa4cf6ba2.png)
 
-If you have any question, suggestion or want to contact, mail me:
+If you want to contact, mail me or send a message on Twitter
 
-📧 igornoiasilva@gmail.com.
+📧 igornoiasilva@gmail.com / ☕ [@IgorNoiaSilva](https://twitter.com/IgorNoiaSilva)
 
 ***
 # 📌 Table of Contents
@@ -44,17 +44,29 @@ My purpose with this project is to learn more about the Vue.js framework, also l
 
 ***
 # <a name="Installation"></a>🛠 Installation
-You need to install [Node.js](https://nodejs.org/en/download/) and [Vue.js](https://vuejs.org/v2/guide/), then in order to clone the project, run this command:
+You need to install [Node.js](https://nodejs.org/en/download/), [git](https://git-scm.com) and [Vue.js](https://vuejs.org/v2/guide/), then in order to clone the project, run this command:
 
-```git clone https://github.com/AleNoia/todolist.git```
+```
+
+git clone https://github.com/AleNoia/todolist.git
+
+```
 
 Install dependencies
 
-```npm install```
+```
+
+npm install
+
+```
 
 Run the aplication
 
-```npm run serve```
+```
+
+npm run serve
+
+```
 
 ***
 
