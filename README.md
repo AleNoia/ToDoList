@@ -1,14 +1,16 @@
-
-
-# 📋 toDoList
- 
-This project is a simple web application of one to do list implemented with Vue.js. 
-
+<h1 align="center">
+   
 ![image](https://user-images.githubusercontent.com/82424777/117688679-605bca00-b18f-11eb-954d-d76fa4cf6ba2.png)
+</h1>
 
-If you want to contact, mail me or send a message on Twitter
+<p align="center">
+This project is a simple web application of one to do list implemented with Vue.js. 
+</p>
+ 
+<p align="center">
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/AleNoia/toDoList?color=%2304D361"> <img alt="Repository size" src="https://img.shields.io/github/repo-size/AleNoia/toDoList"> <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/AleNoia/toDoList">
+</p>
 
-📧 igornoiasilva@gmail.com / ☕ [@IgorNoiaSilva](https://twitter.com/IgorNoiaSilva)
 
 ***
 # 📌 Table of Contents
@@ -22,6 +24,8 @@ If you want to contact, mail me or send a message on Twitter
   * 📊 [Data panel](#dataPanel) 
 * 📱 [Responsive Web Design](#Responsive)
 * 🤝 [Contributing](#Contributing)
+* ⚙ [Technologies Used](#TechnologiesUsed)
+* 👋 [Author](#Author)
 * 🧾 [License](#License)
 ***
 # <a name="features"></a>💡 Features
@@ -263,9 +267,41 @@ The ToDoList is fully responsive.
 ![image](https://user-images.githubusercontent.com/82424777/117745688-58c51100-b1e1-11eb-9000-d5231895cdf3.png)
 
 ***
-# <a name="Contributing"></a>🤝 Contributing
-Feel free to contribute.
 
+# <a name="TechnologiesUsed"></a> ⚙ Technologies used
+
+Technologies that were used in the construction of the project:
+
+- [Vue.js](https://vuejs.org)
+- [JavaScript](https://www.javascript.com)
+- [HTML](https://html.com)
+- [SCSS](https://sass-lang.com)
+
+***
+
+# <a name="Contributing"></a>🤝 Contributing
+
+1. Fork the project.
+2. Create a new branch with your changes: ```git checkout -b my-feature```
+3. Save your changes and create a commit message telling you what you did: ```git commit -m" feature: My new feature "```
+4. Submit your changes: ```git push origin my-feature```
+5. Now just open your pull request in the repository that you forked describing your changes
+6. After the merge of your pull request is done, you can delete yout branch
+
+> If you have any questions check [this guide](https://github.com/unform/unform/blob/main/.github/CONTRIBUTING.md) on how to contribute
+ 
+Feel free to contribute 🙂
+
+***
+# <a name="Author"></a>👋 Author
+
+### [Igor Noia Silva](https://github.com/AleNoia)
+
+If you want to contact, mail me or send a message on Twitter
+
+[![Gmail Badge](https://img.shields.io/badge/-igornoiasilva@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:igornoiasilva@gmail.com)](mailto:igornoiasilva@gmail.com)  ![badge](https://img.shields.io/twitter/url?label=%40IgorNoiaSilva&style=social&url=https%3A%2F%2Ftwitter.com%2FIgorNoiaSilva)
+
+***
 ***
 # <a name="License"></a>🧾 License
 Released in 2021. This project is under the [MIT license](https://github.com/AleNoia/todolist/blob/main/LICENSE).
